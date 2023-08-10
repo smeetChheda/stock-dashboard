@@ -3,6 +3,7 @@ import Card from './Card';
 import { mockCompanyProfile } from '../consts/mock';
 import Header from './Header';
 import Details from './Details';
+import Overview from './Overview';
 
 export default function Dashboard() {
     return (
@@ -18,9 +19,13 @@ export default function Dashboard() {
                 </Card>
             </div>
             <div>
-                <Card>
-                    Overview
-                </Card>
+                <Overview 
+                    symbol={mockCompanyProfile.ticker} 
+                    price={300}
+                    change={30} 
+                    changePercent={10.0} 
+                    currency={"USD"} 
+                />
             </div>
             <div className="row-span-2 xl:row-span-3">
                 <Details details={mockCompanyProfile}/>
