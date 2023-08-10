@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { mockCompanyProfile } from '../consts/mock';
 import Header from './Header';
+import Details from './Details';
 
 export default function Dashboard() {
     return (
@@ -22,9 +23,7 @@ export default function Dashboard() {
                 </Card>
             </div>
             <div className="row-span-2 xl:row-span-3">
-                <Card>
-                    Details
-                </Card>
+                <Details details={mockCompanyProfile}/>
             </div>
 
         </div>
